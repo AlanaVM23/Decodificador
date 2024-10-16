@@ -15,27 +15,30 @@
         <img class="logo" src="img/Logo.png" alt="logo alura">
     </header>
 
-    <main>
-        <section class="esquerda">
-            <textarea name="entrada_texto" class="entrada_texto" cols="41" rows="14" placeholder="Digite seu texto"></textarea>
-            <div class="btns">
+    <main class="conteudo">
+        <section class="conteudo_esquerda">
+            <textarea name="entrada_texto" class="conteudo_esquerda_texto" placeholder="Digite seu texto"></textarea>
                 <p> <i class="fa-solclass fa-circle-info"></i> Apenas letras minusculas e sem acento</p>
-                <button class="btn_crip" onclick="btnCriptografar()">Criptografar</button>
-                <button class="btn_descrip" onclick="btnDescriptografar()">Descriptografar</button>
-            </div>
+                <ul class="conteudo_esquerda_btn">
+                    <li>
+                        <button class="conteudo_esquerda_btn_crip" onclick="btnCriptografar()">Criptografar</button>
+                    </li>
+                    <li>
+                    <button class="conteudo_esquerda_btn_descrip" onclick="btnDescriptografar()">Descriptografar</button>
+                    </li>
+                </ul>
         </section>
     
-        <section class="direita">
-            <div class="conteudo_inicial">
-                <img class="img" src="img/High quality products 1 1.png" alt="imagem padrão">
-                <h1 class="titulo_esquerda">Nenhuma mensagem encontrada</h1>
-                <h2 class="texto_esquerda">Digite um texto que você deseja criptografar ou descriptografar.</h2>
+        <section class="conteudo_direita">
+            <div class="conteudo_direita_inicial">
+                <img class="conteudo_direita_inicial_img" src="img/High quality products 1 1.png" alt="imagem padrão">
+                <h1 class="conteudo_direita_inicial_titulo">Nenhuma mensagem encontrada</h1>
+                <h2 class="conteudo_direita_inicial_texto">Digite um texto que você deseja criptografar ou descriptografar.</h2>
             </div>
 
-            <div class="resposta">
-                <textarea class="saida_texto" id="saida" rows="15"></textarea>
-                
-                    <button class="btn_copiar" onclick="btnCopiar()">Copiar</button>
+            <div class="conteudo_direita_resposta">
+                <textarea class="conteudo_direita_resposta_texto" id="saida" rows="15"></textarea>
+                <button class="conteudo_direita_resposta_btn" onclick="btnCopiar()">Copiar</button>
                 </div>
             </div>
         </section>
