@@ -10,8 +10,9 @@ body{
     padding-top: 20px;
 }
 
-main{
+.conteudo{
     display: flex;
+    justify-content: center;
     margin-bottom: 20px;
     margin-left: 10%;
     margin-right: 0;
@@ -19,13 +20,12 @@ main{
     gap: 100px;
 }
 
-.esquerda{
+.conteudo_esquerda{
     width: 50%;
 }
 
-.entrada_texto{
+.conteudo_esquerda_texto{
     margin-top: 50px;
-    margin-bottom:80px;
     color: #0A3871;
     background: transparent;
     border: none;
@@ -33,32 +33,37 @@ main{
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 32px;
+    width: 650px;
+    height: 450px;
 }
 
 ::placeholder{
     color: #0A3871;
 }
 
-textarea:focus{
+.conteudo_esquerda_texto:focus{
     outline: none;
 }
 
-.btns{
-    position: absolute;
+.conteudo_esquerda_btn{
+    display: flex;
     bottom: 60px; 
-    left: 160px;
+    left: 130px;
     max-width: 700px; 
+    list-style-type: none;
+    padding: 0;
+    gap: 5px;
+    widows: 335px;
 }
 
-main p{
+.conteudo p{
     font-size: 10px;
     color: #495057cb;
 }
 
-main .btn_crip{
+.conteudo_esquerda_btn_crip{
     background-color: #0A3871;
     color: #E5E5E5;
-    margin-right: 7px;
     border-radius: 24px;
     cursor: pointer;
     width: 335px;
@@ -66,7 +71,7 @@ main .btn_crip{
     border: 1px solid #0A3871;
 }
 
-main .btn_descrip{
+.conteudo_esquerda_btn_descrip{
     background-color: #D8DFE8;
     color: #0A3871;
     border-radius: 24px;
@@ -76,14 +81,14 @@ main .btn_descrip{
     border: 1px solid #0A3871;
 }
 
-.direita{
+.conteudo_direita{
     display: flex; 
     flex-direction: column; 
     justify-content:center; 
     align-items: center;
     margin-top: 20px;
     margin-bottom: 5px;
-    padding: 20px;     
+    padding: 30px;     
     text-align: center;
     background-color: #fff;
     border: none;
@@ -91,20 +96,20 @@ main .btn_descrip{
     width: 30%;
 }
 
-.resposta {
-    display: none; 
-}
-
-.direita h1{
+.conteudo_direita_inicial_titulo{
     font-size: 26px;
 }
 
-.direita h2{
+.conteudo_direita_inicial_texto{
     font-size: 20px;
     font-weight: lighter;
 }
 
-.saida_texto{
+.conteudo_direita_resposta{
+    display: none; 
+}
+
+.conteudo_direita_resposta_texto{
     width: 90%;
     margin: 30px 10px;
     font-size: 30px;
@@ -113,7 +118,7 @@ main .btn_descrip{
     text-align: left;
 }
 
- .btn_copiar{
+ .conteudo_direita_resposta_btn{
     background: transparent;
     color: #0A3871;
     border-radius: 24px;
@@ -124,4 +129,132 @@ main .btn_descrip{
     margin: 30px 10px ;
 }
 
+@media(max-width: 1300px){
+    .conteudo_esquerda_texto{
+        width: 500px;
+        height: 400px;
+    }
 
+    .conteudo_esquerda_btn{
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        gap: 10px;
+    }
+
+    .conteudo_esquerda_btn_crip{
+        width: 100%;
+    }
+     
+    .conteudo_esquerda_btn_descrip{
+        width: 100%;
+    }
+
+    .conteudo_direita_inicial_img{
+        width: 250px;
+    }
+}
+
+@media(max-width: 950px){
+    .conteudo_esquerda_texto{
+        width: 350px;
+        height: 400px;
+    }
+
+    .conteudo_esquerda_btn{
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        gap: 10px;
+    }
+
+    .conteudo_esquerda_btn_crip{
+        width: 100%;
+    }
+
+    .conteudo_esquerda_btn_descrip{
+        width: 100%;
+    }
+
+    .conteudo_direita{
+        margin-right: 50px;
+        width: 30%;
+    }
+
+    .conteudo_direita_inicial_img{
+        width: 200px;
+    }
+
+    .conteudo_direita_inicial_titulo{
+        font-size: 22px;
+    }
+    
+    .conteudo_direita_inicial_texto{
+        font-size: 18px;
+        font-weight: lighter;
+    }
+}
+
+@media(max-width: 600px){
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow:-moz-hidden-unscrollable;
+    }
+
+    .logo{
+        margin-left: 0;
+    }
+
+    .conteudo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 10px;
+        width: 95%;
+        gap: 20px;
+        height: 100vh;
+    }
+
+    .conteudo_esquerda{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 300px;
+    }
+    
+    .conteudo_esquerda_texto{
+        width: 100%;
+        height: 250px;
+        margin: 0;
+    }
+
+    .conteudo_esquerda_btn{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .conteudo_esquerda_btn_crip{
+        width: 100%;
+    }
+     
+    .conteudo_esquerda_btn_descrip{
+        width: 100%;
+    }
+
+    .conteudo_direita{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 50px 0;
+        margin: 0;
+        margin-bottom: 40px;
+    }
+
+    .conteudo_direita_inicial_img{
+        width: 300px;
+    }
+}
